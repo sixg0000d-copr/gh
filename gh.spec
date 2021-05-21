@@ -2,7 +2,7 @@
 %undefine _debugsource_packages
 
 %global forgeurl https://github.com/cli/cli
-Version:         1.10.0
+Version:         1.10.2
 
 %forgemeta
 
@@ -59,5 +59,8 @@ install -m 0644 -vp completions/fish  %{buildroot}%{_datadir}/fish/vendor_comple
 
 
 %changelog
+* Fri May 21 2021 sixg0000d <sixg0000d@gmail.com> - 1.10.2-1
+- Update to 1.10.2
+
 * Fri May 21 2021 sixg0000d <sixg0000d@gmail.com> - 1.10.0-1
 - Initial package
