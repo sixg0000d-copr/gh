@@ -2,7 +2,7 @@
 %undefine _debugsource_packages
 
 %global forgeurl https://github.com/cli/cli
-Version:         1.10.2
+Version:         1.11.0
 
 %forgemeta
 
