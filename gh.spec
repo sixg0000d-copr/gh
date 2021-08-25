@@ -7,7 +7,7 @@ Version:         2.0.0
 %forgemeta
 
 Name:            gh
-Release:         1%{?dist}
+Release:         2%{?dist}
 Summary:         GitHub's official command line tool
 License:         MIT
 URL:             %{forgeurl}
@@ -27,6 +27,7 @@ and your code.
 
 
 %build
+export GH_VERSION=%{version}
 go env -w GOPROXY=https://proxy.golang.org,direct
 %make_build bin/gh manpages
 mkdir completions
@@ -59,8 +60,4 @@ install -m 0644 -vp completions/fish  %{buildroot}%{_datadir}/fish/vendor_comple
 
 
 %changelog
-* Fri May 21 2021 sixg0000d <sixg0000d@gmail.com> - 1.10.2-1
-- Update to 1.10.2
-
-* Fri May 21 2021 sixg0000d <sixg0000d@gmail.com> - 1.10.0-1
-- Initial package
+%{autochangelog}
